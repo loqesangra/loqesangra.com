@@ -1,0 +1,53 @@
+/*
+ Theme Name:   loqesangra
+ Theme URI:    https://loqesangra.com
+ Description:  Twenty Twenty One Child Theme
+ Author:       loqesangra
+ Author URI:   https://loqesangra.com
+ Template:     twentytwentyone
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  loqesangra
+*/
+
+/*
+  We should probably use a build system and so for this
+  but hey, time's scarce around here. We're going quick and dirty for this one
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+  --global--color-primary: #f9f9f9;
+  --global--color-background: #16283F;
+  --global--font-primary: 'Roboto Slab', Georgia, serif;
+  --global--font-secondary: 'Roboto Slab', Georgia, serif;
+}
+
+.news-box {
+  margin: -30px auto 20px;
+  padding: 20px;
+  max-width: 540px;
+  background-color: #1b3250;
+}
+
+.news-box p {
+  line-height: 1.2;
+  margin: 10px;
+}
+
+.news-box input,
+.news-box input:focus {
+  border: none;
+  font-size: 16px;
+  color: var(--global--color-primary);
+  background-color: #16283F;
+  margin: 10px;
+}
+
+.news-box .mc-field-group {
+  display: flex;
+  flex-wrap: wrap;
+}

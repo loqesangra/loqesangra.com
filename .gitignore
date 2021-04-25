@@ -1,2 +1,5 @@
 local-config.php
 production-config.php
+.DS_Store
+debug.log
+.htaccess
