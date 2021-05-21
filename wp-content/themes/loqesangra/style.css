@@ -24,30 +24,107 @@
   --global--color-background: #16283F;
   --global--font-primary: 'Roboto Slab', Georgia, serif;
   --global--font-secondary: 'Roboto Slab', Georgia, serif;
+  --responsive--aligndefault-width: calc(90vw - var(--responsive--spacing-horizontal));
+  --responsive--alignwide-width: calc(90vw - var(--responsive--spacing-horizontal));
 }
 
-.news-box {
-  margin: -30px auto 20px;
-  padding: 20px;
+@media only screen and (min-width: 822px) {
+  :root {
+    --responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
+    --responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
+  }
+}
+
+.tnp-subscription {
+  margin: 15px 0 !important;
+  padding: 15px;
   max-width: 540px;
   background-color: #1b3250;
 }
 
-.news-box p {
+.tnp-subscription p {
   line-height: 1.2;
   margin: 10px;
 }
 
-.news-box input,
-.news-box input:focus {
+.tnp-subscription label {
+  font-size: 11px;
+}
+
+.tnp-subscription input,
+.tnp-subscription input:focus {
   border: none;
   font-size: 16px;
-  color: var(--global--color-primary);
-  background-color: #16283F;
+  color: var(--global--color-primary) !important;
+  background-color: #16283F !important;
   margin: 10px;
 }
 
-.news-box .mc-field-group {
-  display: flex;
-  flex-wrap: wrap;
+.tnp-field:nth-child(3) {
+  margin-right: 5%;
 }
+
+.tnp-field:nth-child(3),
+.tnp-field:nth-child(4) {
+  width: 47%;
+  float: left;
+}
+
+
+.site-description {
+  display: none;
+}
+@media (min-width: 540px) {
+  .site-description {
+    display: block;
+  }
+}
+
+.entry-title,
+.singular .entry-title {
+  font-size: 32px;
+}
+@media (min-width: 540px) {
+  .entry-title,
+  .singular .entry-title {
+    font-size: var(--entry-header--font-size);
+  }
+}
+
+.singular .entry-header {
+  border-bottom-width: 1px;
+  padding-bottom: var(--global--spacing-vertical);
+  margin-bottom: calc(1.5 * var(--global--spacing-vertical));
+}
+
+.site-header {
+  padding-bottom: 0;
+}
+
+@media (min-width: 822px) {
+  .site-content {
+    display: flex;
+    padding: 3em;
+  }
+
+  .site-header {
+    order: 2;
+    flex-basis: 35%;
+    align-content: baseline;
+    padding-bottom: calc(1 * var(--global--spacing-vertical));
+  }
+
+  .site-branding {
+    margin: 0;
+  }
+
+  .content-area {
+    padding-right: 2em;
+    flex-grow: 1;
+  }
+
+  .site-header-fixed {
+    position: fixed;
+  }
+}
+
